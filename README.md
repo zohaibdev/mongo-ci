@@ -10,43 +10,30 @@ I take mongodb latest library from official mongodb site, if you wanted to insta
 
 **Step 4:** Open config/mongo_db.php file and configure MongoDB connection.
 
-> `$config['host'] = 'localhost';`
-> `$config['port'] = 27017;`
-> `$config['username'] = 'localhost';`
-> `$config['password'] = 'password';`
-> `$config['collecion'] = 'database';`
-> `$config['authenticate'] = FALSE;`
+> `$config['host'] = 'localhost';`<br>
+> `$config['port'] = 27017;`<br>
+> `$config['username'] = 'localhost';`<br>
+> `$config['password'] = 'password';`<br>
+> `$config['collecion'] = 'database';`<br>
+> `$config['authenticate'] = FALSE;`<br>
 
-### Workflow
-
+### Workflow<br>
 $mongo = $this->mongo_db->getConn() = (new MongoDB\Client($connection_string))->Collecion_name;
 
-### How to get and insert data in MongoDB with CodeIgniter.
+### How to get and insert data in MongoDB with CodeIgniter.<br>
+Get Data<br>
+`$mongo = $this->mongo_db->getConn();`<br>
+`$Customers = $mongo->Customer->find(['FromCity' => 'HOUSTON']);`<br>
+`foreach ($Customers as $Customer) {`<br>
+    `echo $Customers['name'], "\n";`<br>
+`}`<br>
 
-Get Data 
-
-`$mongo = $this->mongo_db->getConn();`
-
-`$Customers = $mongo->Customer->find(['FromCity' => 'HOUSTON']);`
-
-`foreach ($Customers as $Customer) {`
-
-    `echo $Customers['name'], "\n";`
-
-`}`
-
-
-Insert Data
-
-`$mongo = $this->mongo_db->getConn();`
-
-`$insertOneResult = $mongo->Customer->insertOne(`
-
-        `['username' => 'John007','email' => 'john@example.com','name' => 'John Smith']`
-
-    `);`
-
-`print_r("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());`
+Insert Data<br>
+`$mongo = $this->mongo_db->getConn();`<br>
+`$insertOneResult = $mongo->Customer->insertOne(`<br>
+        `['username' => 'John007','email' => 'john@example.com','name' => 'John Smith']`<br>
+    `);`<br>
+`print_r("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());`<br>
 
 Customer = Document
 
