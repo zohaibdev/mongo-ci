@@ -11,15 +11,10 @@ I take mongodb latest library from official mongodb site, if you wanted to insta
 **Step 4:** Open config/mongo_db.php file and configure MongoDB connection.
 
 > `$config['host'] = 'localhost';`
-
 > `$config['port'] = 27017;`
-
 > `$config['username'] = 'localhost';`
-
 > `$config['password'] = 'password';`
-
 > `$config['collecion'] = 'database';`
-
 > `$config['authenticate'] = FALSE;`
 
 ### Workflow
