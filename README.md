@@ -2,13 +2,11 @@
 
 I take mongodb latest library from official mongodb site, if you wanted to install mongodb latest version so run this command on your root directory: composer require mongodb/mongodb
 
-**Step 1:** Download the package and unzip it on the root directory.
+**Step 1:** Open config/autoload.php file and add 'mongo_db' in $autoload['libraries'] array.
 
-**Step 2:** Open config/autoload.php file and add 'mongo_db' in $autoload['libraries'] array.
+**Step 2:** Open config/autoload.php file and add 'mongo_db' in $autoload['config'] array.
 
-**Step 3:** Open config/autoload.php file and add 'mongo_db' in $autoload['config'] array.
-
-**Step 4:** Open config/mongo_db.php file and configure MongoDB connection.
+**Step 3:** Open config/mongo_db.php file and configure MongoDB connection.
 
 > `$config['host'] = 'localhost';`<br>
 > `$config['port'] = 27017;`<br>
