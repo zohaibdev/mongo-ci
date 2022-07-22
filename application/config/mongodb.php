@@ -2,9 +2,9 @@
 
 
 $config['host'] = 'cluster0.tgqsr.gcp.mongodb.net';
-$config['port'] = 27017;
-$config['username'] = 'mayasmsuser';
-$config['password'] = 'U63EIEmWov9Ccjt8';
-$config['collecion'] = 'MayabytesSMS';
+$config['port'] = 123456;
+$config['username'] = 'demousername';
+$config['password'] = 'demopassword';
+$config['collecion'] = 'DemoCollection';
 $config['authenticate'] = FALSE;
 
